@@ -24,7 +24,12 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
-    }
+      "supportsTablet": true,
+      "bundleIdentifier": "com.company.mobile"
+    },
+    "android": {
+      "package": "com.company.mobile"
+    },
+    "description": ""
   }
 }

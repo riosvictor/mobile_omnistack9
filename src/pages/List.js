@@ -11,12 +11,12 @@ export default function List(){
 
     useEffect(() => {
         AsyncStorage.getItem('user').then(user_id => {
-            const socket = socketio(process.env.REACT_APP_API_URL, {
+            const socket = socketio('https://rios-backend-omnistack9.herokuapp.com/', {
                 query: { user_id },
             })
 
             socket.on('booking_response', booking => {
-                Alert.alert(`Sua reserva em ${booking.spot.company} em ${booking.date} foi ${booling.approved ? 'APROVADA' : 'REJEITADA'}`)
+                Alert.alert(`Sua reserva em ${booking.spot.company} em ${booking.date} foi ${booking.approved ? 'APROVADA' : 'REJEITADA'}`)
              })
         })        
     }, []);
